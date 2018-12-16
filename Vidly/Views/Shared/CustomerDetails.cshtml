@@ -1,0 +1,18 @@
+﻿@model Vidly.ViewModels.CustomerViewModel
+
+@*Comment on
+    multiple lines
+*@
+
+@{
+    ViewBag.Title = "Customer Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if(Model.name.Equals(null) || Model.id.Equals(null))
+{
+    <p>Null customer</p>
+}
+
+
+<h2>@Model.id, @Model.name</h2>
