@@ -1,0 +1,17 @@
+﻿@model Vidly.ViewModels.MoviesListViewModel
+
+@{
+    ViewBag.Title = "Movies List";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Movies Listed here</p>
+
+<ul>
+    @foreach (var movie in Model.MovieList)
+    {
+        <li>@movie.Id, @movie.Name</li>;
+    }
+</ul>
+@Html.ActionLink("Touch Me", "Customers", "CustomerDetails", new { id = 2 });
